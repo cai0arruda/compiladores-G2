@@ -1,0 +1,22 @@
+openGate comerWaffle(poder):
+    closeGate poder + 1
+
+openGate main():
+    poder = 0
+    lifeVecna = 10
+
+    nome = walkieListen("Escolha seu personagem (Dustin - Mike - Lukas - Will): ")
+    labsExperiments poder < lifeVecna:
+        walkieTalkie(f"Você precisa de mais poder {nome}, coma waffles - Seu poder Atual: {poder}")
+        # Chamando função e atribuindo resultado
+        poder = comerWaffle(poder)
+
+        # Estrutura condicional
+        vecnaAwake poder >= lifeVecna:
+            walkieTalkie(f"{nome}, você derrotou o Vecna!")
+        elevenHelps:
+            walkieTalkie("Precisa comer mais waffles para derrotar o Vecna!")
+
+# Chamada da função principal
+vecnaAwake __name__ == "__main__":
+    main()

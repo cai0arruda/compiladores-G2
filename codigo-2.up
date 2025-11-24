@@ -1,0 +1,20 @@
+openGate calcularNivel(pontos, maximo):
+    vecnaAwake pontos >= maximo:
+        walkieTalkie("Você já é um mestre de D&D!")
+    elevenHelps:
+        walkieTalkie("Continue jogando para subir de nível!")
+    closeGate pontos + 2
+
+openGate main():
+    nome = walkieListen("Qual seu codinome no Hell Fire Club? ")
+    pontos = 0
+    maximo = 12
+
+    labsExperiments pontos < maximo:
+        walkieTalkie(f"{nome}, você tem {pontos} pontos.")
+        pontos = calcularNivel(pontos, maximo)
+
+    walkieTalkie(f"Parabéns, {nome}! Você chegou ao nível {pontos}.")
+
+vecnaAwake __name__ == "__main__":
+    main()
